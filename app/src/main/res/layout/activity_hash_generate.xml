@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".Hash_Generate_Activity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/extra_bold"
+        android:text="@string/hash_generator"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/planeText"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="20dp"
+        android:background="@color/med_blue"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/enter_your_text"
+        android:maxLines="6"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/light_text"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:boxBackgroundColor="@color/med_blue"
+        app:endIconTint="@color/light_text"
+        app:boxStrokeColor="@color/main_green"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:startIconDrawable="@drawable/lock"
+        app:startIconTint="@color/main_green">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTV"
+            android:layout_width="match_parent"
+            android:paddingBottom="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="SHA-256"
+            android:paddingStart="50dp"
+            android:paddingTop="20dp"
+            android:layout_height="60dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cornerRadius="6dp"
+        android:id="@+id/generate"
+        android:text="Generate"
+        android:textAllCaps="true"
+        android:fontFamily="@font/bold"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="wrap_content"
+        android:textColor="@color/main_green"
+        android:layout_margin="20dp"
+        android:padding="14dp"
+        android:fontFamily="@font/semi_bold"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/generate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planeText">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

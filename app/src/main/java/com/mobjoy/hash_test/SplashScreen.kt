@@ -22,7 +22,7 @@ class SplashScreen : AppCompatActivity() {
 
     private fun startSplash() {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this , Hash_Generate_Activity ::class.java)
+            val intent = Intent(this , HashGenerateActivity ::class.java)
             startActivity(intent)
             finish()
         },2500)

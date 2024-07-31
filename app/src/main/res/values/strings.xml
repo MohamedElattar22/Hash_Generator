@@ -4,7 +4,6 @@
     <string name="hash_generator">HASH \n GENERATOR</string>
     <string name="hint">hint</string>
     <string name="enter_your_text">Enter your text</string>
-    <string name="result">Result</string>
     <string-array name="hash_algorithms">
         <item>SHA-256</item>
         <item>SHA-512</item>
